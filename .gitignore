@@ -1,0 +1,7 @@
+# ignore all by default
+*
+
+!.gitignore
+!README.md
+!services.yaml.template
+!Tiltfile

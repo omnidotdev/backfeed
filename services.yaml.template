@@ -1,0 +1,15 @@
+services:
+  # ----------------------------
+  # service-name:
+  #   repo: repository URL (required)
+  #   path: local path (optional, defaults to `services/service-name`; example: ../repo-path)
+  #   env: array of environment variables to set (optional); example:
+  #
+  #        env:
+  #          - TILT_CUSTOM_REPO_ENV_PATH: ../repo-path/.env.local
+  #
+  # ----------------------------
+  - api:
+      repo: https://github.com/omnidotdev/backfeed-api#master
+  - app:
+      repo: https://github.com/omnidotdev/backfeed-app#master
