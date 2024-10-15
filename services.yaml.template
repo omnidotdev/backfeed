@@ -9,7 +9,7 @@ services:
   #          - TILT_CUSTOM_REPO_ENV_PATH: ../repo-path/.env.local
   #
   # ----------------------------
-  - api:
+  - backfeed-api:
       repo: https://github.com/omnidotdev/backfeed-api#master
-  - app:
+  - backfeed-app:
       repo: https://github.com/omnidotdev/backfeed-app#master
