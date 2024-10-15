@@ -29,7 +29,7 @@ for service in services:
     if "path" in values:
         path = values["path"]
 
-    local_resource("dev-%s" % name,serve_cmd="cd %s && bun dev" % path)
+    local_resource("dev-%s" % name, serve_cmd="cd %s && bun dev" % path, labels=[name])
 
     # checkout only if path does not already exist
     # ! NB: without this path existence check, data loss may occur due to overwriting. Be very careful if disabling this.
@@ -44,4 +44,3 @@ for service in services:
     if os.path.exists("%s/%s" % (path, "Tiltfile")):
         print(color.green("     ❇️ Loading Tiltfile for %s..." % name))
         include(os.path.join(path, "Tiltfile"))
-
